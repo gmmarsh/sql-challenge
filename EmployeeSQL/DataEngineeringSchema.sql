@@ -1,11 +1,11 @@
 --department table
-CREATE TABLE department AS d (
+CREATE TABLE department (
     dept_no VARCHAR(100) NOT NULL PRIMARY KEY,
     dept_name VARCHAR(100) NOT NULL
 );
 
 --dept_emp table
-CREATE TABLE dept_emp AS de (
+CREATE TABLE dept_emp (
     emp_no INT NOT NULL,
     dept_no VARCHAR(100) NOT NULL,
     PRIMARY KEY (emp_no, dept_no),
@@ -14,7 +14,7 @@ CREATE TABLE dept_emp AS de (
 );
 
 --dept_manager table
-CREATE TABLE dept_manager AS dm (
+CREATE TABLE dept_manager (
     dept_no VARCHAR(100) NOT NULL,
     emp_no INT NOT NULL,
     PRIMARY KEY (emp_no, dept_no),
@@ -23,7 +23,7 @@ CREATE TABLE dept_manager AS dm (
 );
 
 --employee table
-CREATE TABLE employees AS e (
+CREATE TABLE employees (
     emp_no INT NOT NULL PRIMARY KEY,
     emp_title_id VARCHAR(100) NOT NULL,
     birth_date DATE NOT NULL,
@@ -35,7 +35,7 @@ CREATE TABLE employees AS e (
 );
 
 --salaries table
-CREATE TABLE salaries AS s (
+CREATE TABLE salaries (
     emp_no INT NOT NULL,
     salary INT NOT NULL,
     PRIMARY KEY (emp_no, salary),
@@ -43,7 +43,7 @@ CREATE TABLE salaries AS s (
 );
 
 --titles table
-CREATE TABLE titles AS t (
+CREATE TABLE titles (
     title_id VARCHAR(100) NOT NULL PRIMARY KEY,
     title VARCHAR(100) NOT NULL,
 );
